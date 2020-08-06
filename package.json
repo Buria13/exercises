@@ -1,0 +1,18 @@
+{
+  "name": "drafts",
+  "version": "1.0.0",
+  "description": "npm packages",
+  "main": "index.js",
+  "dependencies": {
+    "core-decorators": "^0.20.0",
+    "jasmine": "^3.6.1"
+  },
+  "devDependencies": {
+    "lodash": "^4.17.19"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SB",
+  "license": "ISC"
+}

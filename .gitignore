@@ -1,0 +1,16 @@
+# IDEs and editors
+.idea
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Logs
+logs
+*.log
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+

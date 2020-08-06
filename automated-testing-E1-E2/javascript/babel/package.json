@@ -1,0 +1,16 @@
+{
+  "name": "babel",
+  "version": "1.0.0",
+  "description": "simple babel example",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d build"
+  },
+  "author": "SB",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4"
+  }
+}
