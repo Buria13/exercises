@@ -5,3 +5,6 @@ const user = {
 
 };
 
+let x = ['cool'];
+
+console.log(user[x]);

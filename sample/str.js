@@ -3,7 +3,11 @@ str = 'Reduce the array with plus';
 
 //console.log(str.match(/multiply|plus/));
 
-const operator = str => str.match(/plus|minus|multiply|divide/)[0];
+const operator = str => str.matchAll(/Reduce|plus|minus|multiply|divide/);
 
 
-console.log(operator(str));
+// console.log(str.match(/Reduce|Filter|Map|plus|minus|multiply|divide/g));
+
+let sss = 'Filter the array and return if modulo 3 equals 1 then map with multiply by 3';
+
+console.log(sss.split(/and|then/));
