@@ -14,3 +14,6 @@ logs
 /tmp
 /out-tsc
 
+/sample
+fast-check.js
+

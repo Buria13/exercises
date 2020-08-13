@@ -1,4 +1,9 @@
-let str = "John Bull";
-// let regexp = /(\w+) (\w+)/;
+let str = "Reduce the array with multiply by";
+str = 'Reduce the array with plus';
 
-console.log( str.replace(/(\w+) (\w+)/, '$2$1') ); // Bull, John
+//console.log(str.match(/multiply|plus/));
+
+const operator = str => str.match(/plus|minus|multiply|divide/)[0];
+
+
+console.log(operator(str));
