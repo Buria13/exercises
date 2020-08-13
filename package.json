@@ -8,7 +8,9 @@
     "jasmine": "^3.6.1"
   },
   "devDependencies": {
-    "lodash": "^4.17.19"
+    "chai": "^4.2.0",
+    "lodash": "^4.17.19",
+    "mocha": "^8.1.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
