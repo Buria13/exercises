@@ -1,21 +1,10 @@
-const { Executor , Command } = require('./commands')
-
-
+const Executor = require('./executor');
+const Interpreter = require('./interpreter');
 
 function interpret(arr, cmds) {
-    const getOperator = str => str.match(/plus|minus|multiply|divide/g);
-    const getMethod = str => str.match(/Filter|Map|Reduce/g);
-
-    const executor = new Command(new Executor(arr));
-
-    const operator = getOperator(cmds);
-
-
-
+    const executor = new Executor(new Interpreter(arr), cmds);
+    executor.execute();
+    return executor.interpreter.arr;
 }
-
-
-
-console.log(interpret([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'minus'));
 
 module.exports = interpret;
