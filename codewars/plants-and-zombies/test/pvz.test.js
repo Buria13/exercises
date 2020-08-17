@@ -1,4 +1,4 @@
-const PvzTest = require('../../test/test');
+const Test = require('../../test/test');
 
 const plantsAndZombies = require('../plantsAndZombies');
 
@@ -48,5 +48,5 @@ describe("5 Example Tests",_ => {
             [[0,2,16],[1,3,19],[2,0,18],[4,2,21],[6,3,20],[7,5,17],[8,1,21],[8,2,11],[9,0,10],[11,4,23],[12,1,15],[13,3,22]]]
     ];
     const exampleSolutions = [10,12,20,19,null];
-    exampleTests.forEach((e,i) => PvzTest.assertEquals(plantsAndZombies(...e),exampleSolutions[i]));
+    exampleTests.forEach((e,i) => Test.assertEquals(plantsAndZombies(...e),exampleSolutions[i]));
 });
