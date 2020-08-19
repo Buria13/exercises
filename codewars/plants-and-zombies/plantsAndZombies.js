@@ -34,12 +34,10 @@ function plantsAndZombies(lawnMap, zombieStats) {
 
     while(!bf.gameIsOver()) {
         bf.nextMove();
-        //console.log(bf.lawnMap[4]);
-        // console.log(bf.movesCounter);
+
     }
-    // console.log(bf.eliminated);
-    // console.log('move Counter=', bf.movesCounter);
-    return bf.eliminated ? bf.movesCounter + 1 : null;
+
+    return bf.eliminated ? bf.movesCounter - 1 : null;
 }
 
 plantsAndZombies(lawnMap, zombies);

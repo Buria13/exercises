@@ -9,23 +9,22 @@ class Battlefield {
     }
 
     nextMove() {
-        this.newZombiesAppear();
-        // console.log(this.lawnMap[4]);
-        this.shooting();
         this.zombiesMove();
+        this.newZombiesAppear();
+        this.shooting();
     }
 
-    // const zombies = [[0,4,28],[1,1,6],[2,0,10],[2,4,15],[3,2,16],[3,3,13]];
     newZombiesAppear() {
         while (this.zombies.length > 0 && this.zombies[0][0] === this.movesCounter) {
             const zombie = new Zombie(this.zombies.shift());
-            this.lawnMap[zombie.row].splice(-1, 1, zombie.hp)
+            this.lawnMap[zombie.row].splice(-1, 1, zombie.hp);
         }
     }
 
     shooting() {
         this.numberShootersAction();
         this.sShooterAction();
+        this.movesCounter++;
     }
 
     numberShootersAction() {
@@ -43,7 +42,7 @@ class Battlefield {
     }
 
     sShooterAction() {
-        for (let i = this.lawnMap[0].length; i > 0; i--) {
+        for (let i = this.lawnMap[0].length - 1; i >= 0; i--) {
             for (let row = 0; row < this.lawnMap.length; row++) {
                 if (this.lawnMap[row][i] === 'S') {
                     this.shootZombieInRow(this.lawnMap[row]);
@@ -77,7 +76,6 @@ class Battlefield {
         }
     }
 
-    // ['2', ' ', '3', ' ', ' ', ' ', ' ', 28]
     zombiesMove() {
         if (this.lawnMap.some(el => typeof el[0] === 'number')) {
             this.eliminated = true;
@@ -88,14 +86,12 @@ class Battlefield {
                     row.splice(firstZombieIndex - 1, row.length, ...row.slice(firstZombieIndex), ' ');
                 }
             });
-
-            this.movesCounter++;
         }
     }
 
     gameIsOver() {
         return this.eliminated
-             || this.zombies.length < 1 && !this.lawnMap.some(row => row.some(el => typeof el === 'number'));
+            || this.zombies.length < 1 && !this.lawnMap.some(row => row.some(el => typeof el === 'number'));
     }
 }
 
