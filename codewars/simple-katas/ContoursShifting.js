@@ -3,7 +3,7 @@ function contoursShifting(matrix) {
 }
 
 
-const Test = require('./test/test');
+const Test = require('../test/test');
 const matrix = [
         [ 1, 2, 3, 4],
         [ 5, 6, 7, 8],

@@ -1,4 +1,4 @@
-const Test = require('./test/test');
+const Test = require('../test/test');
 
 function spinWords(str){
     return str.replace(/\w{5,}/g, w => w.split('').reverse().join(''));
