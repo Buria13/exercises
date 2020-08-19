@@ -1,4 +1,4 @@
-const Test = require('./test/test');
+const Test = require('../test/test');
 
 function chemistry(first, second) {
     const greatestCommonDivisor = ([x, y]) => {
