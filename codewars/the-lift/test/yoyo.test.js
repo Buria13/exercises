@@ -10,4 +10,4 @@ queue = [
 ]
 
 
-Test.assertEquals(theLift(0,4), [0, 2, 4, 2, 4, 2, 0]);
+Test.assertEquals(theLift(queue,4), [0, 2, 4, 2, 4, 2, 0]);

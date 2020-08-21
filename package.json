@@ -4,8 +4,11 @@
   "description": "npm packages",
   "main": "index.js",
   "dependencies": {
+    "codewars": "^0.2.0",
     "core-decorators": "^0.20.0",
-    "jasmine": "^3.6.1"
+    "cypress": "^4.12.1",
+    "jasmine": "^3.6.1",
+    "puppeteer": "^5.2.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",

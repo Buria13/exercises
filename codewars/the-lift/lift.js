@@ -10,6 +10,10 @@ class Lift {
         this.stops = [0];
     }
 
+    start() {
+        this.stop();
+    }
+
     move() {
         this[this.currentMovement]();
     }
@@ -46,11 +50,11 @@ class Lift {
     }
 
     stop() {
-        // console.log(`currentMovement: ${this.currentMovement}, currentFloor: ${this.currentFloor}`);
-        // console.log(this.passengers);
-        this.stops.push(this.currentFloor);
+        console.log(`currentMovement: ${this.currentMovement}, currentFloor: ${this.currentFloor}`);
+        if (this.currentFloor !== this.stops[this.stops.length - 1]) this.stops.push(this.currentFloor);
         this.unloadPassengers();
         this.loadPassengers();
+        console.log(this.passengers);
 
         if (this.passengers.length > 0 || this.building.floors.some(f => f.queue.length > 0)) {
             this.move();

@@ -3,20 +3,14 @@ const Lift = require('./lift');
 const theLift = function(queues, capacity) {
     const lift = new Lift(queues, capacity);
 
-    lift.move();
+    lift.start();
 
     console.log(lift.stops);
     return lift.stops;
 }
 
-let queues = [
-    [],
-    [],
-    [4,4,4,4,  4,4,4,4],
-    [],
-    [2,2,2,2,  2,2,2,2],
-]
+let queues = [ [ 3, 3, 3, 3, 3, 3 ], [], [], [], [], [], [] ]
 
-theLift(queues, 4); // [0, 2, 4, 2, 4, 2, 0]
+//theLift(queues, 5); // [0, 3, 0, 3, 0]
 
 module.exports = theLift;
