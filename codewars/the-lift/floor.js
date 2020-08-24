@@ -9,6 +9,10 @@ class Floor {
     }
 
     getButtons() {
+        this.buttons = {
+            buttonUp: false,
+            buttonDown: false
+        }
         if (this.queue.some(p => p > this.floor)) this.buttons.buttonUp = true;
         if (this.queue.some(p => p < this.floor)) this.buttons.buttonDown = true;
         return this.buttons;

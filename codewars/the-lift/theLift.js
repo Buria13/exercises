@@ -9,8 +9,12 @@ const theLift = function(queues, capacity) {
     return lift.stops;
 }
 
-let queues = [ [ 3, 3, 3, 3, 3, 3 ], [], [], [], [], [], [] ]
+let queues = [
+    [ 1, 1, 2, 1 ],
+    [],
+    [ 0, 1, 1, 0 ]
+]
 
-//theLift(queues, 5); // [0, 3, 0, 3, 0]
+theLift(queues, 1); // [0, 1, 5, 6, 5, 1, 0, 1, 0]
 
 module.exports = theLift;
